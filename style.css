@@ -94,13 +94,7 @@ header .container{
 .fundo{
   
   background-image: url(img/fundo.jfif) ;
-  background-blend-mode: lighten ;
-  height: 120vh;
-  width: 100vw;
   background-size: cover;
-  position: absolute;
-  
- 
   
 }
 .rodape ul {
@@ -136,26 +130,28 @@ header .container{
   font-size: 90%;
  }
  
- .fundo
- {
-  background-image:  url(img/fundo\ medio.jpg);
-  position: absolute;
-  background-size: contain;
-  height: 120vh;
-  width: 100vw;
-  background-repeat: no-repeat;
  
-}}
+}
 
  
 
 
-@media (max-width:1000px) {
+@media (max-width:690px) {
   html{
     font-size: 80%;
   }
+  .fundo{
+  
+    background-image: url(img/fundo\ 900px.jpg) ;
+    
+    background-size: cover;
+     background-position: center;
+    
+   
+    
+  }
  
-
+ 
  
 }
 
