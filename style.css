@@ -35,22 +35,22 @@ header .container{
  font-weight: 400;
 
 }
-.container .nav-bar ul{
+.container .nav-bar .menu{
   display: flex;
   list-style: none;
   margin-right: 90px;
 }
-.nav-bar ul li {
+.nav-bar .menu li {
   margin-left: 70px;
 }
-.nav-bar ul li a {
+.nav-bar .menu li a {
   text-decoration: none;
   color: #f0f8ffce;
   font-size: 1.4rem;
   font-weight: 300;
   transition: all 0.4s;
 }
-.nav-bar ul li a:hover{
+.nav-bar .menu li a:hover{
   color: #9747ffb9;
 }
 .corpo{
@@ -111,7 +111,7 @@ header .container{
   margin-bottom: 30px;
 }
 .rodape ul li {
- margin-top: 90px;
+ margin-top: 170px;
  width: 40vw;
  
   
@@ -121,6 +121,9 @@ header .container{
  color: #ffffff9c;
  text-decoration: none;
  border-bottom: 1px solid #fff;
+}
+#btn-mobile{
+  display: none;
 }
 
 @media (max-width: 1320px){
@@ -157,38 +160,66 @@ header .container{
   header{
     padding: 20px 15px;
 
- 
-   
   }
-  nav{
-    display: none;
-  }
-.menu.on {
+
+ /* ------------NAV BAR---------------*/
+   .bar{
+    display: block;
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    margin:  5px auto;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+   }
+
+ .amburguer{
+  
   display: block;
 }
-.one, .two, .three{
-  background-color: #fff;
-  height: 5px;
-  width: 100%;
-  margin: 6px auto;
-  transition: 0.4s ease;
-}
-.menu-burguer{
-  width: 40px;
-  height: 30px;
-  cursor: pointer;
-  position: absolute;
-  right: 10%;
+
+ 
+ .menu.on{
+  display: flex;
+ }
+ 
 
 }
-
-.menu.on .nav-bar ul{
-  position: absolute;
-  display: inline-block;
-  right: 5%;
-  line-height: 70px ;
+@media (max-width:952px){
+  .amburguer.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .amburguer.active .bar:nth-child(1){
+    transform: translate( 10px) rotate(48deg);
+  }
+  .amburguer.active .bar:nth-child(3){
+    transform: translate( -8x) rotate(-49deg);
+  }
+  .menu{
+    top: 70px;
+    position: absolute;
+    right: -100%;
+    gap: 0;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(#000, transparent);
+    text-align: center;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    transition: 0.3s;
+   
+  }
   
-}}
+ 
+  .nav-item{
+    line-height: 80px;
+    margin-right: auto;
+    text-align: center;
+  }
+  .menu.active{
+    right: -100px;
+  }
+}
 
 
 
