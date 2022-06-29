@@ -15,7 +15,7 @@ html{
 body{
   font-size: 100%;
   height: 100vh;
-  background-color: #000;
+ 
  
 }
 
@@ -48,7 +48,10 @@ header .container{
   color: #f0f8ffce;
   font-size: 1.4rem;
   font-weight: 300;
- 
+  transition: all 0.4s;
+}
+.nav-bar ul li a:hover{
+  color: #9747ffb9;
 }
 .corpo{
  margin-left: 130px;
@@ -89,6 +92,10 @@ header .container{
   border-radius: 4px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.4s;
+}
+.button button:hover{
+  background-color: #9747ffb9;
 }
 
 .fundo{
@@ -98,13 +105,13 @@ header .container{
   
 }
 .rodape ul {
-   
   display: flex;
   justify-content: space-between;
   list-style: none;
+  margin-bottom: 30px;
 }
 .rodape ul li {
-  margin-top: 270px;
+ margin-top: 90px;
  width: 40vw;
  
   
@@ -115,6 +122,7 @@ header .container{
  text-decoration: none;
  border-bottom: 1px solid #fff;
 }
+
 @media (max-width: 1320px){
   .corpo h1{
     font-size: 2.8rem;
@@ -122,7 +130,7 @@ header .container{
 }
 @media (max-width:1194px){
   .corpo h1{
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
 }
 @media (max-width:1057px){
@@ -130,29 +138,64 @@ header .container{
   font-size: 90%;
  }
  
- 
 }
-
+@media (max-width: 1000px){
+ html{
+  font-size: 80%;
+ }
  
 
+ }
+ header{
+  padding: 20px 15px;
+ }
 
-@media (max-width:690px) {
+@media (max-width:952px) {
   html{
     font-size: 80%;
   }
-  .fundo{
-  
-    background-image: url(img/fundo\ 900px.jpg) ;
-    
-    background-size: cover;
-     background-position: center;
-    
+  header{
+    padding: 20px 15px;
+
+ 
    
-    
   }
- 
- 
- 
+  nav{
+    display: none;
+  }
+.menu.on {
+  display: block;
 }
+.one, .two, .three{
+  background-color: #fff;
+  height: 5px;
+  width: 100%;
+  margin: 6px auto;
+  transition: 0.4s ease;
+}
+.menu-burguer{
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+
+}
+
+.menu.on .nav-bar ul{
+  position: absolute;
+  display: inline-block;
+  right: 5%;
+  line-height: 70px ;
+  
+}}
+
+
+
+
+
+
+ 
+
 
 
