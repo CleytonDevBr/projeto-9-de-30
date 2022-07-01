@@ -8,15 +8,19 @@
   box-sizing: border-box;
  font-family: 'Inter', sans-serif;
 }
-
+html, body{
+  position: relative;
+  overflow: hidden;
+}
 html{
+
   font-size: 100%;
 }
 body{
   font-size: 100%;
   height: 100vh;
- 
- 
+  background: linear-gradient( 90deg, #000 ,cadetblue 50%,  #9747ffb9  40%, rgba(0, 0, 0, 0.856));
+  
 }
 
 header{
@@ -72,7 +76,7 @@ header .container{
   letter-spacing: 0.1rem;
 }
 .roxo{
-  color: #9747FF;
+  color: cadetblue;
 }
 .paragrafo p{
   color: #fff;
@@ -98,12 +102,8 @@ header .container{
   background-color: #9747ffb9;
 }
 
-.fundo{
-  
-  background-image: url(img/fundo.jfif) ;
-  background-size: cover;
-  
-}
+
+
 .rodape ul {
   display: flex;
   justify-content: space-between;
@@ -186,6 +186,11 @@ header .container{
 
 }
 @media (max-width:952px){
+
+ 
+
+}
+@media (max-width:952px){
   .amburguer.active .bar:nth-child(2){
     opacity: 0;
   }
@@ -203,10 +208,11 @@ header .container{
     background: linear-gradient(#000, transparent);
     text-align: center;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     height: 70%;
     transition: 0.3s;
-   
+    right: -100%;
+  
   }
   
  
@@ -216,7 +222,7 @@ header .container{
     text-align: center;
   }
   .menu.active{
-    right: -100px;
+    right: -90px;
   }
 }
 
